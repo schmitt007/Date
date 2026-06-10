@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Fico feliz q tenha dito q não ❤️</h1>
+    <p id="resultado"></p>
+    <p>(me manda print pra eu salvar o dia e a sua escolha❤️)</p>
+</div>
+
+<script>
+let data = localStorage.getItem("dataEscolhida");
+let hora = localStorage.getItem("horaEscolhida");
+let comida = localStorage.getItem("comidaEscolhida");
+
+document.getElementById("resultado").innerHTML =
+`
+Nosso encontro será no dia <b>${data}</b>
+às <b>${hora}</b>.
+
+E vamos comer <b>${comida}</b> 😍
+`;
+</script>
+</body>
+</html>

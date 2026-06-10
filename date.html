@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Então,quando vc esta livre?</h1>
+
+    <input type="date" id="data"><br><br>
+
+    <select id="hora">
+        <option>16:00</option>
+        <option>17:00</option>
+        <option>18:00</option>
+        <option>19:00</option>
+        <option>20:00</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="salvarData()">
+    Salvar data ♥
+</button>
+
+<script>
+function salvarData() {
+    let data = document.getElementById("data").value;
+    let hora = document.getElementById("hora").value;
+
+    localStorage.setItem("dataEscolhida", data);
+    localStorage.setItem("horaEscolhida", hora);
+
+    window.location.href = "food.html";
+}
+</script>
+</body>
+</html>

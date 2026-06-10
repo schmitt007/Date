@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Oq vc quer comer? 🍽️</h1>
+
+    <button onclick="final()">🍕 Pizza</button>
+    <button onclick="final()">🍣 Sushi</button>
+    <button onclick="final()">🍔 Hamburger</button>
+    <button onclick="final()">🍨 Sorvete</button>
+</div>
+
+<script>
+function final(){
+    let comida = event.target.innerText;
+
+    localStorage.setItem("comidaEscolhida", comida);
+
+    window.location.href="final.html";
+}
+</script>
+
+</body>
+</html>
